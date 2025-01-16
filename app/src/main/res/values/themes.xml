@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.DiseñoUI" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorTextPrimary</item>
+        <item name="android:colorBackground">@color/backgroundColor</item>
+        <item name="colorOnBackground">@color/text_color_primary</item>
+        <item name="colorSurface">@color/backgroundColor</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariantLight</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">?attr/colorOnSurfaceVariant</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="thumbTint">@color/thumb_tint</item>
+        <item name="trackTint">@color/track_tint</item>
+        <item name="colorPrimary">@color/text_primary_light</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="Theme.DiseñoUI" parent="Base.Theme.DiseñoUI" />
+</resources>

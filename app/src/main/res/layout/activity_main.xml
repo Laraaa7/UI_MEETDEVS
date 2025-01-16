@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="MEETDEVS"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Coding with love"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintStart_toStartOf="@id/titulo"
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+    <Switch
+        android:id="@+id/dark_mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:trackTint="@color/track_tint"
+        android:thumb="@drawable/switch_modo_noche"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dark_mode_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Dark Mode"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dark_mode_switch" />
+
+    <LinearLayout
+        android:id="@+id/name_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dark_mode_switch">
+
+        <TextView
+            android:id="@+id/name_TextView"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary" />
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:background="@android:drawable/edit_text"
+            android:backgroundTint="#e2d8ec"
+            android:drawableEnd="@android:drawable/ic_menu_close_clear_cancel"
+            android:padding="12dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/password_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_layout">
+
+        <TextView
+            android:id="@+id/password_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Password"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:background="@android:drawable/edit_text"
+            android:backgroundTint="#e2d8ec"
+            android:drawableEnd="@android:drawable/ic_menu_close_clear_cancel"
+            android:inputType="textPassword"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/confirm_password_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_layout">
+
+        <TextView
+            android:id="@+id/confirm_password_TextView"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Confirm"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/confirm_password_field"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:background="@android:drawable/edit_text"
+            android:backgroundTint="#e2d8ec"
+            android:drawableEnd="@android:drawable/ic_menu_close_clear_cancel"
+            android:inputType="textPassword"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/upload_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Upload photo"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password_layout" />
+
+    <ImageView
+        android:id="@+id/galeria"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:src="@drawable/baseline_photo_24"
+        app:layout_constraintStart_toEndOf="@id/upload_photo"
+        app:layout_constraintTop_toTopOf="@id/upload_photo" />
+
+
+    <TextView
+        android:id="@+id/geolocation_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:text="Allow geolocalization"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upload_photo" />
+
+    <Switch
+        android:id="@+id/geolocation_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:thumbTint="@color/thumb_tint"
+        android:trackTint="@color/track_tint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="@id/galeria"
+        app:layout_constraintTop_toBottomOf="@id/galeria"
+        android:scaleX="1.5"
+        android:scaleY="1.5" />
+
+    <CheckBox
+        android:id="@+id/terms_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="64dp"
+        android:text="I agree with Terms &amp; Conditions"
+        android:textColor="?attr/colorOnSurface"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/geolocation_textView" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#6A3BA0"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terms_checkbox" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="68dp"
+        android:backgroundTint="#D1C4E9"
+        android:text="Reset"
+        android:textColor="#4A148C"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terms_checkbox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
